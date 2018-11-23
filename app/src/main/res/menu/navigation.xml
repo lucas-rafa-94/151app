@@ -4,11 +4,11 @@
     <item
         android:id="@+id/navigation_music"
         android:icon="@drawable/ic_home_black_24dp"
-        android:title="Musica" />
+        android:title="Sugerir" />
 
     <item
         android:id="@+id/navigation_playlist"
         android:icon="@drawable/ic_dashboard_black_24dp"
-        android:title="Playlist" />
+        android:title="Ranking" />
 
 </menu>
