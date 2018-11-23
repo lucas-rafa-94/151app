@@ -1,4 +1,4 @@
-package br.com.umcincoum.djme.api.controller;
+package br.com.umcincoum.djme.api.controller.event;
 
 import android.os.AsyncTask;
 
@@ -26,5 +26,6 @@ public class GetAllEventsController extends AsyncTask<Void,Void,List<EventModel>
     protected void onPostExecute(List<EventModel> eventModels) {
         super.onPostExecute(eventModels);
         this.eventsActivity.listEvents = eventModels;
+        this.eventsActivity.loadData(eventModels);
     }
 }

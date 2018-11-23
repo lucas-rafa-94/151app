@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">djme</string>
+    <string name="title_activity_event_details">EventDetailsActivity</string>
+    <string name="title_activity_disco">DiscoActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="cadastro">Não possui cadastro? <![CDATA[<font color=#EF6C00>Cadastre-se</font>]]></string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

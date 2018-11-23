@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/backgroundColor"
+    android:layout_height="match_parent"
+    tools:context=".ui.disco.playlist.VoteMusicActivity">
+
+    <TextView
+        android:id="@+id/lblTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:fontFamily="@font/proxima_nova_thin"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:textColor="@color/mainButtonClicked"
+        android:text="Quer dar Like nessa música?"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblTitle"
+        android:padding="10dp"
+        android:fontFamily="@font/proxima_nova_thin"
+        android:textColor="@color/mainButtonNormal"
+        android:textSize="14sp"
+        android:text="Artista"
+        android:id="@+id/lblArtistt"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblArtistt"
+        android:padding="10dp"
+        android:background="@color/backgroundColorList"
+        android:gravity="center"
+        android:fontFamily="@font/proxima_nova_thin"
+        android:textSize="12sp"
+        android:text="sgsf"
+        android:textColor="@color/txtColor"
+        android:id="@+id/txtArtist"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtArtist"
+        android:padding="10dp"
+        android:fontFamily="@font/proxima_nova_thin"
+        android:textColor="@color/mainButtonNormal"
+        android:textSize="14sp"
+        android:text="Música"
+        android:id="@+id/lblMusic"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblMusic"
+        android:padding="10dp"
+        android:background="@color/backgroundColorList"
+        android:gravity="center"
+        android:fontFamily="@font/proxima_nova_thin"
+        android:textSize="12sp"
+        android:text="sgsf"
+        android:textColor="@color/txtColor"
+        android:id="@+id/txtMusic"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtMusic"
+        android:layout_marginTop="20dp"
+        android:onClick="vote"
+        android:background="@drawable/custom_btn_main"
+        android:fontFamily="@font/proxima_nova_thin"
+        android:textAllCaps="false"
+        android:textColor="@color/txtColor"
+        android:text="Confirmar Like :)"/>
+
+</RelativeLayout>

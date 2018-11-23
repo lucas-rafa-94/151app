@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/backgroundColor"
+    tools:context=".ui.event.EventDetailsActivity">
+
+    <TextView
+        android:fontFamily="@font/proxima_nova_thin"
+        android:id="@+id/txtTitle"
+        android:textSize="30sp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/mainButtonClicked"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Descrição"
+        android:padding="10dp"/>
+
+    <TextView
+        android:textColor="@color/mainButtonNormal"
+        android:fontFamily="@font/proxima_nova_thin"
+        android:id="@+id/txtName"
+        android:layout_below="@+id/txtTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:text="Nome"
+        android:padding="10dp"/>
+
+    <TextView
+        android:textSize="12sp"
+        android:textColor="@color/txtColor"
+        android:fontFamily="@font/proxima_nova_thin"
+        android:id="@+id/lblName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/backgroundColorList"
+        android:text="Nomesadfsdfs"
+        android:padding="10dp"
+        android:layout_below="@+id/txtName"/>
+
+
+    <TextView
+        android:textColor="@color/mainButtonNormal"
+        android:textSize="14sp"
+
+        android:fontFamily="@font/proxima_nova_thin"
+        android:id="@+id/txtDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Descricao"
+        android:layout_below="@id/lblName"
+        android:padding="10dp"/>
+
+    <TextView
+        android:id="@+id/lblDescription"
+        android:fontFamily="@font/proxima_nova_thin"
+        android:textSize="12sp"
+        android:background="@color/backgroundColorList"
+        android:textColor="@color/txtColor"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="Nomesadfsdfs"
+        android:padding="10dp"
+        android:layout_below="@+id/txtDescription"/>
+
+    <TextView
+        android:fontFamily="@font/proxima_nova_thin"
+        android:textSize="14sp"
+        android:textColor="@color/mainButtonNormal"
+        android:id="@+id/txtDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Data"
+        android:layout_below="@id/lblDescription"
+        android:padding="10dp"/>
+
+    <TextView
+        android:textColor="@color/txtColor"
+        android:background="@color/backgroundColorList"
+        android:fontFamily="@font/proxima_nova_thin"
+        android:textSize="12sp"
+        android:id="@+id/lblDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nomesadfsdfs"
+        android:padding="10dp"
+        android:layout_below="@+id/txtDate"/>
+
+
+    <TextView
+        android:fontFamily="@font/proxima_nova_thin"
+        android:textColor="@color/mainButtonNormal"
+        android:id="@+id/txtAvaiable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Avaiable"
+        android:layout_below="@id/lblDate"
+        android:padding="10dp"/>
+
+    <TextView
+        android:fontFamily="@font/proxima_nova_thin"
+        android:textSize="12sp"
+        android:textColor="@color/txtColor"
+        android:background="@color/backgroundColorList"
+        android:id="@+id/lblAvaiable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nomesadfsdfs"
+        android:padding="10dp"
+        android:layout_below="@+id/txtAvaiable"/>
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/proxima_nova_thin"
+        android:textAllCaps="false"
+        android:textColor="@color/txtColor"
+        android:background="@drawable/custom_btn_main"
+        android:onClick="toConfirmEvent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Discotecar"
+        android:padding="10dp"
+        android:layout_below="@id/lblAvaiable"/>
+
+</RelativeLayout>

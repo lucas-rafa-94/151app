@@ -1,9 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/backgroundColor"
     tools:context=".ui.event.EventsActivity">
 
-</android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:fontFamily="@font/proxima_nova_thin"
+        android:padding="10dp"
+        android:layout_marginTop="30px"
+        android:layout_width="match_parent"
+        android:layout_height="150px"
+        android:text="Eventos"
+        android:textColor="@color/mainButtonNormal"
+        android:textSize="30sp"
+        android:id="@+id/txtEventos"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/txtEventos"
+        android:id="@+id/rvEventos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

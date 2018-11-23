@@ -1,4 +1,4 @@
-package br.com.umcincoum.djme.api.controller;
+package br.com.umcincoum.djme.api.controller.user;
 
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -31,6 +31,7 @@ public class CreateUserController extends AsyncTask<UserModel,Void,ResponseCall>
             Intent toLogin = new Intent(this.registerActivity, LoginActivity.class);
             Toast.makeText(this.registerActivity, responseCall.getDescription(), Toast.LENGTH_SHORT).show();
             this.registerActivity.startActivity(toLogin);
+            this.registerActivity.finish();
         } else {
             Toast.makeText(this.registerActivity, responseCall.getDescription(), Toast.LENGTH_SHORT).show();
         }

@@ -4,12 +4,14 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import br.com.umcincoum.djme.R;
-import br.com.umcincoum.djme.api.controller.LogInUserController;
+import br.com.umcincoum.djme.api.controller.user.LogInUserController;
 import br.com.umcincoum.djme.api.model.UserModel;
 import br.com.umcincoum.djme.ui.event.EventsActivity;
 
@@ -21,6 +23,8 @@ public class LoginActivity extends AppCompatActivity {
     EditText edtEmail, edtPassword;
     Button btnLogIn, btnRegister;
 
+    TextView txtRegister;
+
     LogInUserController logInUserController;
 
     @Override
@@ -31,11 +35,15 @@ public class LoginActivity extends AppCompatActivity {
         sp = getApplicationContext().getSharedPreferences("appSp", 0);
 
         init();
-
+        txtRegister = findViewById(R.id.txtRegister);
         edtEmail = findViewById(R.id.edtEmail);
         edtPassword = findViewById(R.id.edtPassword);
         btnLogIn = findViewById(R.id.btnLogIn);
         btnRegister = findViewById(R.id.btnRegister);
+
+        String str_cadastro = getString(R.string.cadastro);
+
+        txtRegister.setText(Html.fromHtml(str_cadastro));
 
     }
 

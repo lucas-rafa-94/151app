@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/backgroundColor"
+    android:layout_height="match_parent"
+    tools:context=".ui.disco.fragments.ChooseMusicFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_marginTop="20px"
+        android:fontFamily="@font/proxima_nova_thin"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Selecione a playlist para escolher sua música"
+        android:textColor="@color/mainButtonClicked"
+        android:padding="10dp"
+        android:textSize="16sp"
+        android:id="@+id/lblGenre"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/lblGenre"
+        android:id="@+id/rvGenre"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

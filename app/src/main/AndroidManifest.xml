@@ -7,8 +7,8 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher_ofi"
+        android:label="151"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -24,7 +24,33 @@
         <activity
             android:name=".ui.user.RegisterActivity"
             android:theme="@style/FullScreen" />
-        <activity android:name=".ui.event.EventsActivity"></activity>
+        <activity
+            android:name=".ui.event.EventsActivity"
+            android:theme="@style/FullScreen" />
+        <activity
+            android:name=".ui.event.EventDetailsActivity"
+            android:theme="@style/FullScreen" />
+        <activity
+            android:name=".ui.event.ConfirmEventActivity"
+            android:theme="@style/FullScreen" />
+        <activity
+            android:name=".ui.disco.DiscoActivity"
+            android:label="@string/title_activity_disco"
+            android:theme="@style/FullScreen" />
+        <activity
+            android:name=".ui.disco.chooseArtist.ChooseArtistActivity"
+            android:theme="@style/FullScreen" />
+        <activity
+            android:name=".ui.disco.chooseMusic.ChooseMusicActivity"
+            android:theme="@style/FullScreen" />
+        <activity
+            android:name=".ui.disco.MusicSelectedActivity"
+            android:theme="@style/FullScreen" />
+        <activity
+            android:name=".ui.disco.playlist.ViewPlaylistActivity"
+            android:theme="@style/FullScreen" />
+        <activity android:name=".ui.disco.playlist.VoteMusicActivity"
+            android:theme="@style/FullScreen"></activity>
     </application>
 
 </manifest>

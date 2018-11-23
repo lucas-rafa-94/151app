@@ -2,39 +2,84 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/backgroundColor"
     android:padding="20px"
     tools:context=".ui.user.LoginActivity">
 
+    <ImageView
+        android:background="@drawable/logo_1"
+        android:layout_centerHorizontal="true"
+        android:layout_width="170dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="20dp"
+        android:layout_above="@id/edtEmail"/>
+
+
     <EditText
+        android:layout_centerInParent="true"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
+        android:background="@drawable/custom_edt_text"
         android:id="@+id/edtEmail"
         android:hint="Email"
+        android:fontFamily="@font/proxima_nova_thin"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/txtColor"
+        android:textColorHint="@color/mainButtonNormal"
          />
 
     <EditText
+
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
+        android:padding="0dp"
+        android:layout_marginTop="10dp"
         android:id="@+id/edtPassword"
+        android:background="@drawable/custom_edt_text"
+        android:fontFamily="@font/proxima_nova_thin"
+        android:textAllCaps="false"
         android:layout_below="@+id/edtEmail"
         android:hint="Password"
+        android:inputType="textPassword"
+        android:textColor="@color/txtColor"
+        android:textSize="16sp"
+        android:textColorHint="@color/mainButtonNormal"
+
+
         />
     <Button
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btnLogIn"
         android:text="Login"
+        android:textSize="16sp"
+        android:fontFamily="@font/proxima_nova_thin"
+        android:textColor="@color/txtColor"
+        android:textAllCaps="false"
+        android:background="@drawable/custom_btn_main"
         android:onClick="loginUser"
         android:layout_below="@+id/edtPassword"/>
-    <Button
+
+
+    <TextView
+        android:id="@+id/txtRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnRegister"
+        android:layout_marginTop="15dp"
+        android:textDirection="locale"
+        android:gravity="center"
+        android:layout_below="@id/btnLogIn"
+        android:layout_alignParentRight="true"
+        android:fontFamily="@font/proxima_nova_thin"
         android:onClick="toRegister"
-        android:text="Cadastre-se"
-        android:layout_below="@+id/btnLogIn"/>
+        android:text="Não possui cadasto | Cadastre-se"
+        android:textColor="@color/txtColor"
+        android:textSize="16sp" />
 
 
 </RelativeLayout>

@@ -1,8 +1,9 @@
 package br.com.umcincoum.djme.api.model;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class UserModel {
+public class UserModel implements Serializable {
 
 
     private String email;

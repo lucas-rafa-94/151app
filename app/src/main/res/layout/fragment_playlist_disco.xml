@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/backgroundColor"
+    tools:context=".ui.disco.fragments.PlaylistDiscoFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:fontFamily="@font/proxima_nova_thin"
+        android:padding="10dp"
+        android:layout_marginTop="20px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Playlists"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        android:id="@+id/lblPlaylistsSearch"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/lblPlaylistsSearch"
+        android:id="@+id/rvPlaylistsSearch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

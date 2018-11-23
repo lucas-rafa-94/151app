@@ -7,8 +7,11 @@ import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
 
+import java.util.List;
+
 import javax.ws.rs.core.MediaType;
 
+import br.com.umcincoum.djme.api.model.EventModel;
 import br.com.umcincoum.djme.api.model.UserModel;
 import br.com.umcincoum.djme.api.model.canonical.ResponseCall;
 import br.com.umcincoum.djme.utils.AppUtils;
@@ -56,5 +59,20 @@ public class UserService {
             e.printStackTrace();
         }
         return userModel;
+    }
+
+    public static void updateEvent(EventModel event, String email){
+        Gson gson = new Gson();
+        String json = gson.toJson(event).toString();
+        client = Client.create();
+        try{
+            webResource = client.
+                    resource(AppUtils.URI + "user/" + email + "/event");
+            response = webResource.accept(MediaType.APPLICATION_JSON_TYPE).header("Content-type","application/json")
+                    .post(ClientResponse.class, json);
+            Log.e("LoginUser", String.valueOf(response.getStatus()) + " - " + gson.fromJson(String.valueOf(response.getEntity(String.class)), UserModel.class).getEmail());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

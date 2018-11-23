@@ -7,7 +7,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import br.com.umcincoum.djme.R;
-import br.com.umcincoum.djme.api.controller.CreateUserController;
+import br.com.umcincoum.djme.api.controller.user.CreateUserController;
 import br.com.umcincoum.djme.api.model.UserModel;
 
 public class RegisterActivity extends AppCompatActivity {

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/backgroundColor"
+    tools:context=".ui.disco.chooseArtist.ChooseArtistActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/proxima_nova_thin"
+        android:text="Selecione seu Artista:"
+        android:textColor="@color/mainButtonClicked"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:id="@+id/txtTitle"
+        />
+
+    <EditText
+        android:background="@drawable/custom_edt_text"
+        android:fontFamily="@font/proxima_nova_thin"
+        android:textColor="@color/txtColor"
+        android:hint="Ex: Arctic Monkeys"
+        android:textSize="12sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="10dp"
+        android:inputType="text"
+        android:textColorHint="@color/mainButtonNormal"
+        android:layout_below="@+id/txtTitle"
+        android:id="@+id/edtSearchBarArtist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/proxima_nova_thin"
+        android:textAllCaps="false"
+        android:background="@drawable/custom_btn_main"
+        android:padding="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/btnSearchArtist"
+        android:onClick="searchArtists"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/txtColor"
+        android:layout_below="@+id/edtSearchBarArtist"
+        android:text="Procurar"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/rvArtist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnSearchArtist"/>
+
+</RelativeLayout>

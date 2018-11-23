@@ -1,20 +1,20 @@
 package br.com.umcincoum.djme.api.model;
 
-import java.util.Date;
+import java.io.Serializable;
 import java.util.List;
 
-public class EventModel {
+public class EventModel implements Serializable {
 
     private String id;
     private String name;
-    private Date date;
+    private String date;
     private String description;
     private String photoUri;
     private String passphrase;
     private List<String> playlists;
     private boolean avaiable;
 
-    public EventModel(String id, String name, Date date, String description, String photoUri, String passphrase, List<String> playlists, boolean avaiable) {
+    public EventModel(String id, String name, String date, String description, String photoUri, String passphrase, List<String> playlists, boolean avaiable) {
         this.id = id;
         this.name = name;
         this.date = date;
@@ -44,11 +44,11 @@ public class EventModel {
         this.name = name;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 

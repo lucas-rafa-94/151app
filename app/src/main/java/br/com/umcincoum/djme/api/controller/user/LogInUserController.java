@@ -1,4 +1,4 @@
-package br.com.umcincoum.djme.api.controller;
+package br.com.umcincoum.djme.api.controller.user;
 
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -32,6 +32,7 @@ public class LogInUserController extends AsyncTask<UserModel,Void,UserModel> {
                 commitSp(userModel);
                 Toast.makeText(this.loginActivity, "Logado com sucesso", Toast.LENGTH_SHORT).show();
                 toEvents();
+                this.loginActivity.finish();
             }
         }else{
             Toast.makeText(this.loginActivity, "Usuário ou Senha Inválidos", Toast.LENGTH_SHORT).show();
@@ -47,6 +48,7 @@ public class LogInUserController extends AsyncTask<UserModel,Void,UserModel> {
         Gson gson = new Gson();
         this.loginActivity.editor = this.loginActivity.sp.edit();
         this.loginActivity.editor.putString("user", gson.toJson(userModel));
+        this.loginActivity.editor.putString("token", "loggedIn");
         this.loginActivity.editor.commit();
     }
 }
