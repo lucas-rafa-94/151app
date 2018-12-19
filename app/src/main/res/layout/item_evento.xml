@@ -4,27 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="20px"
+    android:layout_marginTop="20dp"
     android:background="@drawable/custom_list_item"
     android:orientation="horizontal">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:layout_centerHorizontal="true"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_marginLeft="10px"
-        android:layout_width="66dp"
-        android:layout_height="66dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="4dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         app:civ_border_width="2dp"
         app:civ_border_color="#FF000000"
         android:id="@+id/ivPhoto"/>
 
     <LinearLayout
         android:background="@color/backgroundColorList"
-        android:layout_marginTop="5px"
+        android:layout_marginTop="5dp"
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
-        android:layout_marginLeft="15px"
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -38,11 +39,9 @@
             android:id="@+id/txtName"
             android:layout_height="wrap_content"
             tools:layout_editor_absoluteX="150dp"
-            tools:layout_editor_absoluteY="0dp"
-             />
+            tools:layout_editor_absoluteY="0dp"/>
 
         <TextView
-
             android:fontFamily="@font/proxima_nova_thin"
             android:textColor="@color/txtColor"
             android:textSize="12sp"
@@ -50,8 +49,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:layout_editor_absoluteX="150dp"
-            tools:layout_editor_absoluteY="16dp"
-            />
+            tools:layout_editor_absoluteY="15dp"/>
 
         <TextView
             android:fontFamily="@font/proxima_nova_thin"
@@ -61,8 +59,7 @@
             android:id="@+id/txtDate"
             android:layout_height="wrap_content"
             tools:layout_editor_absoluteX="150dp"
-            tools:layout_editor_absoluteY="35dp"
-           />
+            tools:layout_editor_absoluteY="35dp"/>
 
         <TextView
             android:fontFamily="@font/proxima_nova_thin"
@@ -72,8 +69,7 @@
             android:id="@+id/txtAvaiable"
             android:layout_height="wrap_content"
             tools:layout_editor_absoluteX="150dp"
-            tools:layout_editor_absoluteY="54dp"
-            />
+            tools:layout_editor_absoluteY="50dp"/>
     </LinearLayout>
 
 </LinearLayout>
