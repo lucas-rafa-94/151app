@@ -8,6 +8,7 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -55,9 +56,10 @@ public class EventDetailsActivity extends AppCompatActivity {
     public void toConfirmEvent(View v) {
         if(event.isAvaiable()){
             LayoutInflater inflater = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            PopupWindow popupWindow = new PopupWindow(inflater.inflate(R.layout.activity_confirm_event,null,false),100,100,true);
+            PopupWindow popupWindow = new PopupWindow(inflater.inflate(R.layout.activity_confirm_event,null,false),400,400,true);
 
-            popupWindow.showAtLocation(this.findViewById(R.id.btnConfirmEvent),Gravity.CENTER,0,0);
+            popupWindow.showAtLocation(v,Gravity.CENTER,0,0);
+
 
             //Intent toConfirmEvent = new Intent(this, ConfirmEventActivity.class);
             //toConfirmEvent.putExtra("event", event);

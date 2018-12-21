@@ -1,30 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:background="@color/backgroundColor"
+    android:orientation="vertical"
     tools:context=".ui.event.ConfirmEventActivity">
-
-    <ImageView
-        android:background="@drawable/logo_1"
-        android:layout_centerHorizontal="true"
-        android:layout_width="170dp"
-        android:layout_height="150dp"
-        android:layout_marginBottom="90dp"
-        android:layout_above="@id/txtPassword"/>
-
-    <TextView
-        android:fontFamily="@font/proxima_nova_thin"
-        android:layout_centerInParent="true"
-        android:id="@+id/txtPassword"
-        android:gravity="center"
-        android:textColor="@color/mainButtonClicked"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Senha para Evento"
-        android:padding="10px"/>
 
     <EditText
         android:fontFamily="@font/proxima_nova_thin"
@@ -32,22 +14,24 @@
         android:background="@drawable/custom_edt_text"
         android:id="@+id/edtPassword"
         android:padding="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginLeft="10dp"
         android:inputType="textPassword"
+        android:hint="Senha:"
+        android:textColorHint="@color/mainButtonNormal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/txtPassword"/>
+        android:layout_weight="1"/>
     <Button
         android:layout_marginTop="20dp"
+        android:layout_weight="2"
         android:background="@drawable/custom_btn_main"
         android:fontFamily="@font/proxima_nova_thin"
         android:textColor="@color/txtColor"
         android:textAllCaps="false"
         android:id="@+id/btnConfirmEvent"
         android:text="Confirmar Evento"
+        android:onClick="confirmEvent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"/>
 
-</RelativeLayout>
+</LinearLayout>
