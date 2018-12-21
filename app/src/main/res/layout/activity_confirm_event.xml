@@ -12,7 +12,7 @@
         android:layout_centerHorizontal="true"
         android:layout_width="170dp"
         android:layout_height="150dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="90dp"
         android:layout_above="@id/txtPassword"/>
 
     <TextView
@@ -39,18 +39,15 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtPassword"/>
     <Button
-        android:layout_marginRight="10dp"
-        android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/custom_btn_main"
         android:fontFamily="@font/proxima_nova_thin"
         android:textColor="@color/txtColor"
         android:textAllCaps="false"
-        android:onClick="confirmEvent"
         android:id="@+id/btnConfirmEvent"
         android:text="Confirmar Evento"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/edtPassword"/>
+        android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>

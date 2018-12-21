@@ -39,7 +39,7 @@ public class ViewPlaylistActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_playlist);
 
-        txtPlaylist = findViewById(R.id.txtPlaylist);
+        txtPlaylist = findViewById(R.id.lblPlaylist);
         recyclerView = findViewById(R.id.rvPlaylist);
 
         sp = getApplicationContext().getSharedPreferences("appSp", 0);

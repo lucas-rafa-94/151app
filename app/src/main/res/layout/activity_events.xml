@@ -13,17 +13,23 @@
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:textStyle="bold"
-        android:paddingLeft="5dp"
-        android:text="Eventos"
-        android:background="@color/mainButtonNormal"
-        android:textColor="@color/txtColor"
+        android:layout_marginLeft="10dp"
+        android:text="Meus Eventos"
+        android:textColor="@color/mainButtonClicked"
         android:textSize="30sp"
         android:id="@+id/txtEventos"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/txtEventos"
+        android:src="@drawable/default_line"
+        android:id="@+id/imgSeparador"/>
 
     <android.support.v7.widget.RecyclerView
         android:padding="10dp"
         android:layout_marginTop="10dp"
-        android:layout_below="@id/txtEventos"
+        android:layout_below="@id/imgSeparador"
         android:id="@+id/rvEventos"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

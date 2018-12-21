@@ -6,5 +6,5 @@
 
     <item
         android:state_focused="true"
-        android:drawable="@drawable/highlighted_line"/>
+        android:drawable="@drawable/default_line"/>
 </selector>

@@ -8,15 +8,23 @@
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:fontFamily="@font/proxima_nova_thin"
-        android:padding="10dp"
         android:layout_marginTop="20px"
+        android:fontFamily="@font/proxima_nova_thin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Playlists"
-        android:textColor="@color/colorPrimary"
-        android:textSize="20sp"
+        android:textColor="@color/mainButtonClicked"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:textSize="25sp"
         android:id="@+id/lblPlaylistsSearch"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/lblPlaylistsSearch"
+        android:src="@drawable/default_line"
+        android:id="@+id/imgSeparador"/>
 
     <android.support.v7.widget.RecyclerView
         android:padding="10dp"

@@ -79,7 +79,7 @@ public class ConfirmEventActivity extends AppCompatActivity {
             editor.commit();
 
             Toast.makeText(this, "Senha correta!", Toast.LENGTH_SHORT).show();
-            toDiscoMain();
+            //toDiscoMain();
 
         }else{
             Toast.makeText(this, "Senha Incorreta!", Toast.LENGTH_SHORT).show();

@@ -10,19 +10,27 @@
     <TextView
         android:layout_marginTop="20px"
         android:fontFamily="@font/proxima_nova_thin"
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Selecione a playlist para escolher sua música"
+        android:text="Selecione um gênero musical"
         android:textColor="@color/mainButtonClicked"
+        android:textStyle="bold"
         android:padding="10dp"
-        android:textSize="16sp"
+        android:textSize="25sp"
         android:id="@+id/lblGenre"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/lblGenre"
+        android:src="@drawable/default_line"
+        android:id="@+id/imgSeparador"/>
+
 
     <android.support.v7.widget.RecyclerView
         android:padding="10dp"
         android:layout_marginTop="10dp"
-        android:layout_below="@id/lblGenre"
+        android:layout_below="@id/imgSeparador"
         android:id="@+id/rvGenre"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

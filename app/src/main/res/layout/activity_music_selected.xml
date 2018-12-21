@@ -8,17 +8,26 @@
     tools:context=".ui.disco.MusicSelectedActivity">
 
     <TextView
+        android:fontFamily="@font/proxima_nova_thin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:textColor="@color/mainButtonClicked"
-        android:textSize="20sp"
         android:text="Confirmação escolha"
-        android:fontFamily="@font/proxima_nova_thin"
+        android:textColor="@color/mainButtonClicked"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:textSize="25sp"
         android:id="@+id/lblTitlePage"/>
-    
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/lblTitlePage"
+        android:src="@drawable/default_line"
+        android:id="@+id/imgSeparador"/>
+
+
     <TextView
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:id="@+id/lblPlaylist"
         android:padding="10dp"
         android:textColor="@color/mainButtonNormal"
@@ -27,19 +36,20 @@
         android:textSize="14sp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/proxima_nova_thin"
-        android:text="Playlist"/>
+        android:text="Playlist:"/>
 
     <TextView
         android:padding="10dp"
         android:gravity="center"
-        android:text="asdfsf"
         android:textSize="12sp"
         android:fontFamily="@font/proxima_nova_thin"
         android:textColor="@color/txtColor"
-        android:background="@color/backgroundColorList"
+        android:background="@drawable/custom_list_item"
         android:layout_below="@id/lblPlaylist"
         android:id="@+id/txtPlaylist"
         android:layout_width="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:layout_height="wrap_content" />
 
     <TextView
@@ -52,17 +62,18 @@
         android:textSize="14sp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/proxima_nova_thin"
-        android:text="Artista"/>
+        android:text="Artista:"/>
 
     <TextView
         android:id="@+id/txtArtist"
-        android:background="@color/backgroundColorList"
+        android:background="@drawable/custom_list_item"
         android:padding="10dp"
         android:gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:fontFamily="@font/proxima_nova_thin"
         android:textColor="@color/txtColor"
         android:textSize="12sp"
-        android:text="sdfsdf"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/lblArtist"/>
@@ -77,31 +88,32 @@
         android:textSize="14sp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/proxima_nova_thin"
-        android:text="Música"/>
+        android:text="Música:"/>
 
 
     <TextView
         android:padding="10dp"
-        android:background="@color/backgroundColorList"
+        android:background="@drawable/custom_list_item"
         android:gravity="center"
         android:fontFamily="@font/proxima_nova_thin"
-        android:text="sdfasdf"
         android:textColor="@color/txtColor"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:textSize="12sp"
         android:id="@+id/txtMusic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/lblMusic"/>
+
     <Button
         android:textAllCaps="false"
         android:fontFamily="@font/proxima_nova_thin"
         android:textColor="@color/txtColor"
         android:background="@drawable/custom_btn_main"
-        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Confirmar"
         android:onClick="confirmTrack"
-        android:layout_below="@+id/txtMusic"/>
+        android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>

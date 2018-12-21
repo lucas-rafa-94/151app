@@ -5,101 +5,74 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@color/backgroundColor"
-    android:padding="20px"
     tools:context=".ui.user.RegisterActivity">
 
     <TextView
         android:padding="10dp"
         android:textColor="@color/mainButtonNormal"
-        android:layout_marginTop="20dp"
-        android:textSize="30sp"
+        android:textSize="25sp"
         android:id="@+id/txtTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textStyle="bold"
         android:fontFamily="@font/proxima_nova_thin"
-        android:text="Cadastre-se"
-        />
+        android:text="Cadastre-se" />
 
-    <TextView
-        android:fontFamily="@font/proxima_nova_thin"
-        android:textColor="@color/txtColor"
-        android:padding="10dp"
-        android:textSize="20sp"
-        android:layout_marginTop="20dp"
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
         android:layout_below="@+id/txtTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Nome"
-        android:id="@+id/txtName"/>
+        android:src="@drawable/default_line"
+        android:id="@+id/imgSeparador"/>
 
     <EditText
-        android:padding="10dp"
         android:fontFamily="@font/proxima_nova_thin"
         android:textColor="@color/txtColor"
         android:textColorHint="@color/mainButtonNormal"
         android:background="@drawable/custom_edt_text"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="text"
-        android:id="@+id/edtName"
-        android:layout_below="@+id/txtName"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Email"
-        android:fontFamily="@font/proxima_nova_thin"
+        android:layout_height="35dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:layout_marginTop="20dp"
-        android:padding="10dp"
-
-        android:textSize="20sp"
-        android:textColor="@color/txtColor"
-        android:layout_below="@+id/edtName"
-        android:id="@+id/txtEmail"/>
+        android:inputType="text"
+        android:hint="Nome:"
+        android:id="@+id/edtName"
+        android:layout_below="@+id/imgSeparador"/>
 
     <EditText
-        android:padding="10dp"
         android:fontFamily="@font/proxima_nova_thin"
         android:textColor="@color/txtColor"
         android:textColorHint="@color/mainButtonNormal"
         android:background="@drawable/custom_edt_text"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:hint="Email:"
         android:inputType="textEmailAddress"
         android:id="@+id/edtEmail"
-        android:layout_below="@+id/txtEmail"/>
-
-    <TextView
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/proxima_nova_thin"
-        android:textSize="20sp"
-        android:textColor="@color/txtColor"
-        android:padding="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:text="Senha"
-        android:layout_below="@+id/edtEmail"
-        android:id="@+id/txtPassword"/>
+        android:layout_below="@+id/edtName"/>
 
     <EditText
-        android:padding="10dp"
         android:fontFamily="@font/proxima_nova_thin"
         android:textColor="@color/txtColor"
         android:textColorHint="@color/mainButtonNormal"
         android:background="@drawable/custom_edt_text"
         android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="30dp"
+        android:hint="Senha:"
         android:inputType="textPassword"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txtPassword"
+        android:layout_height="35dp"
+        android:layout_below="@+id/edtEmail"
         android:id="@+id/edtPassword"/>
-
-
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
         android:textSize="16sp"
         android:background="@drawable/custom_btn_main"
         android:fontFamily="@font/proxima_nova_thin"
@@ -108,6 +81,6 @@
         android:onClick="createUser"
         android:text="Cadastrar"
         android:id="@+id/btnRegister"
-        android:layout_below="@+id/edtPassword"/>
+        android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>

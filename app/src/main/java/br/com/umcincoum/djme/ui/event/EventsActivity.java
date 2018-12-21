@@ -102,4 +102,9 @@ public class EventsActivity extends AppCompatActivity {
         Intent toDiscoMain = new Intent(this, DiscoActivity.class);
         startActivity(toDiscoMain);
     }
+
+    @Override
+    public void onBackPressed() {
+
+    }
 }

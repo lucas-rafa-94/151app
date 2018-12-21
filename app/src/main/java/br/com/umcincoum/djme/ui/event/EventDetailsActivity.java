@@ -1,10 +1,14 @@
 package br.com.umcincoum.djme.ui.event;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -50,9 +54,14 @@ public class EventDetailsActivity extends AppCompatActivity {
 
     public void toConfirmEvent(View v) {
         if(event.isAvaiable()){
-            Intent toConfirmEvent = new Intent(this, ConfirmEventActivity.class);
-            toConfirmEvent.putExtra("event", event);
-            startActivity(toConfirmEvent);
+            LayoutInflater inflater = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            PopupWindow popupWindow = new PopupWindow(inflater.inflate(R.layout.activity_confirm_event,null,false),100,100,true);
+
+            popupWindow.showAtLocation(this.findViewById(R.id.btnConfirmEvent),Gravity.CENTER,0,0);
+
+            //Intent toConfirmEvent = new Intent(this, ConfirmEventActivity.class);
+            //toConfirmEvent.putExtra("event", event);
+            //startActivity(toConfirmEvent);
         }else{
             Toast.makeText(this, "Evento não liberado para discotecagem ainda :(", Toast.LENGTH_SHORT).show();
         }

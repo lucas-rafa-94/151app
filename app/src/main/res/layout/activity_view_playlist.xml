@@ -12,45 +12,40 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/proxima_nova_thin"
         android:padding="10dp"
-        android:layout_marginTop="20dp"
-        android:textSize="20dp"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
         android:textColor="@color/mainButtonClicked"
         android:text="Playlist"
         android:id="@+id/lblPlaylist"/>
-    <TextView
+
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/proxima_nova_thin"
-        android:padding="10dp"
+        android:layout_height="2dp"
         android:layout_below="@+id/lblPlaylist"
-        android:layout_marginTop="0dp"
-        android:textSize="14dp"
-        android:gravity="center"
-        android:background="@color/backgroundColorList"
-        android:textColor="@color/txtColor"
-        android:text="Playlist"
-        android:id="@+id/txtPlaylist"/>
+        android:src="@drawable/default_line"
+        android:id="@+id/imgSeparador"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/imgSeparador"
+        android:id="@+id/rvPlaylist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnRefresh"/>
 
     <Button
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/txtPlaylist"
         android:background="@drawable/custom_btn_main"
         android:text="Atualizar"
+        android:layout_alignParentBottom="true"
         android:onClick="refresh"
         android:textAllCaps="false"
         android:fontFamily="@font/proxima_nova_thin"
         android:textColor="@color/txtColor"
-        android:id="@+id/btnRefresh"
-        />
-
-    <android.support.v7.widget.RecyclerView
-        android:padding="10dp"
-        android:layout_marginTop="20dp"
-        android:layout_below="@id/btnRefresh"
-        android:id="@+id/rvPlaylist"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:id="@+id/btnRefresh" />
 
 </RelativeLayout>

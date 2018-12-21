@@ -1,5 +1,6 @@
 package br.com.umcincoum.djme.ui.disco;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -14,6 +15,7 @@ import android.widget.TextView;
 import br.com.umcincoum.djme.R;
 import br.com.umcincoum.djme.ui.disco.fragments.ChooseMusicFragment;
 import br.com.umcincoum.djme.ui.disco.fragments.PlaylistDiscoFragment;
+import br.com.umcincoum.djme.ui.event.EventsActivity;
 
 public class DiscoActivity extends AppCompatActivity {
 
@@ -46,6 +48,8 @@ public class DiscoActivity extends AppCompatActivity {
 
     private void changeFragment (Fragment fragment){
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.setCustomAnimations(android.R.animator.fade_in,android.R.animator.fade_out);
+
         transaction.replace(R.id.containerFragment, fragment);
         transaction.commit();
     };
@@ -65,4 +69,10 @@ public class DiscoActivity extends AppCompatActivity {
         Log.e("User", sp.getString("user",null));
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(DiscoActivity.this,EventsActivity.class));
+        finish();
+    }
 }

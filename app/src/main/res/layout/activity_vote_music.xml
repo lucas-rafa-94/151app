@@ -13,31 +13,42 @@
         android:layout_height="wrap_content"
         android:padding="10dp"
         android:fontFamily="@font/proxima_nova_thin"
-        android:layout_marginTop="20dp"
-        android:textSize="20sp"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
         android:textColor="@color/mainButtonClicked"
-        android:text="Quer dar Like nessa música?"/>
+        android:text="Ótimo gosto!"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/lblTitle"
+        android:src="@drawable/default_line"
+        android:id="@+id/imgSeparador"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/lblTitle"
+        android:layout_below="@+id/imgSeparador"
+        android:layout_marginTop="20dp"
         android:padding="10dp"
         android:fontFamily="@font/proxima_nova_thin"
         android:textColor="@color/mainButtonNormal"
         android:textSize="14sp"
-        android:text="Artista"
+        android:text="Artista:"
         android:id="@+id/lblArtistt"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/lblArtistt"
         android:padding="10dp"
-        android:background="@color/backgroundColorList"
+        android:background="@drawable/custom_list_item"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
         android:gravity="center"
         android:fontFamily="@font/proxima_nova_thin"
         android:textSize="12sp"
-        android:text="sgsf"
         android:textColor="@color/txtColor"
         android:id="@+id/txtArtist"/>
 
@@ -47,32 +58,35 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtArtist"
         android:padding="10dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/proxima_nova_thin"
         android:textColor="@color/mainButtonNormal"
         android:textSize="14sp"
-        android:text="Música"
+        android:text="Música:"
         android:id="@+id/lblMusic"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/lblMusic"
         android:padding="10dp"
-        android:background="@color/backgroundColorList"
+        android:background="@drawable/custom_list_item"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
         android:gravity="center"
         android:fontFamily="@font/proxima_nova_thin"
         android:textSize="12sp"
-        android:text="sgsf"
         android:textColor="@color/txtColor"
         android:id="@+id/txtMusic"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/txtMusic"
         android:layout_marginTop="20dp"
         android:onClick="vote"
         android:background="@drawable/custom_btn_main"
         android:fontFamily="@font/proxima_nova_thin"
         android:textAllCaps="false"
+        android:layout_alignParentBottom="true"
         android:textColor="@color/txtColor"
         android:text="Confirmar Like :)"/>
 
