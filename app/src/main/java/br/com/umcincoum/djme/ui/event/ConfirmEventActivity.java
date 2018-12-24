@@ -46,7 +46,7 @@ public class ConfirmEventActivity extends AppCompatActivity {
 
     }
 
-    public void confirmEvent(View v){
+    /*public void confirmEvent(View v){
         if(event.getPassphrase().equals(edtPassowrd.getText().toString())){
             List<EventModel> listEvent = new ArrayList<>();
             Gson gson = new Gson();
@@ -61,14 +61,14 @@ public class ConfirmEventActivity extends AppCompatActivity {
                 listEvent.add(event);
                 user.setEvents(listEvent);
 
-                updateUserEventController = new UpdateUserEventController(this);
+                updateUserEventController = new UpdateUserEventController();
                 updateUserEventController.execute(user);
 
                 Log.e("listEvents", "Entrou");
             }else {
                 listEvent.add(event);
                 user.setEvents(listEvent);
-                updateUserEventController = new UpdateUserEventController(this);
+                updateUserEventController = new UpdateUserEventController();
                 updateUserEventController.execute(user);
                 Log.e("listEvents", "Nao entrou");
             }
@@ -78,14 +78,14 @@ public class ConfirmEventActivity extends AppCompatActivity {
             editor.putString("user", gson.toJson(user));
             editor.commit();
 
-            Toast.makeText(this, "Senha correta!", Toast.LENGTH_SHORT).show();
-            //toDiscoMain();
+            Toast.makeText(getApplicationContext(), "Senha correta!", Toast.LENGTH_SHORT).show();
+            toDiscoMain();
 
         }else{
-            Toast.makeText(this, "Senha Incorreta!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Senha Incorreta!", Toast.LENGTH_SHORT).show();
         }
     }
-
+*/
     public void toDiscoMain(){
         Intent toDiscoMain = new Intent(this, DiscoActivity.class);
         startActivity(toDiscoMain);

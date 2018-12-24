@@ -2,10 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/popupLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/backgroundColor"
+    android:background="@drawable/popup_background"
     android:orientation="vertical"
+    android:paddingTop="20dp"
     tools:context=".ui.event.ConfirmEventActivity">
 
     <EditText
@@ -14,6 +16,8 @@
         android:background="@drawable/custom_edt_text"
         android:id="@+id/edtPassword"
         android:padding="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:inputType="textPassword"
         android:hint="Senha:"
         android:textColorHint="@color/mainButtonNormal"
@@ -29,6 +33,8 @@
         android:textAllCaps="false"
         android:id="@+id/btnConfirmEvent"
         android:text="Confirmar Evento"
+        android:paddingRight="40dp"
+        android:paddingLeft="40dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"/>

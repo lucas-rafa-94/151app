@@ -7,25 +7,33 @@
     tools:context=".ui.event.EventDetailsActivity">
 
     <TextView
-        android:fontFamily="@font/proxima_nova_thin"
+        android:padding="10dp"
+        android:textColor="@color/mainButtonNormal"
+        android:textSize="25sp"
         android:id="@+id/txtTitle"
-        android:textSize="30sp"
-        android:layout_marginTop="20dp"
-        android:textColor="@color/mainButtonClicked"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Descrição"
-        android:padding="10dp"/>
+        android:textStyle="bold"
+        android:fontFamily="@font/proxima_nova_thin"
+        android:text="Cadastre-se" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/txtTitle"
+        android:src="@drawable/default_line"
+        android:id="@+id/imgSeparador"/>
 
     <TextView
         android:textColor="@color/mainButtonNormal"
         android:fontFamily="@font/proxima_nova_thin"
         android:id="@+id/txtName"
-        android:layout_below="@+id/txtTitle"
+        android:layout_below="@+id/imgSeparador"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:textSize="14sp"
-        android:text="Nome"
+        android:text="Nome:"
         android:padding="10dp"/>
 
     <TextView
@@ -35,7 +43,9 @@
         android:id="@+id/lblName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/backgroundColorList"
+        android:background="@drawable/custom_list_item"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
         android:text="Nomesadfsdfs"
         android:padding="10dp"
         android:layout_below="@+id/txtName"/>
@@ -44,12 +54,12 @@
     <TextView
         android:textColor="@color/mainButtonNormal"
         android:textSize="14sp"
-
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/proxima_nova_thin"
         android:id="@+id/txtDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Descricao"
+        android:text="Descricao:"
         android:layout_below="@id/lblName"
         android:padding="10dp"/>
 
@@ -57,8 +67,11 @@
         android:id="@+id/lblDescription"
         android:fontFamily="@font/proxima_nova_thin"
         android:textSize="12sp"
+        android:scrollbars="vertical"
         android:background="@color/backgroundColorList"
         android:textColor="@color/txtColor"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:text="Nomesadfsdfs"
@@ -72,15 +85,18 @@
         android:id="@+id/txtDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Data"
+        android:layout_marginTop="20dp"
+        android:text="Data:"
         android:layout_below="@id/lblDescription"
         android:padding="10dp"/>
 
     <TextView
         android:textColor="@color/txtColor"
-        android:background="@color/backgroundColorList"
+        android:background="@drawable/custom_list_item"
         android:fontFamily="@font/proxima_nova_thin"
         android:textSize="12sp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
         android:id="@+id/lblDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -95,7 +111,8 @@
         android:id="@+id/txtAvaiable"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Avaiable"
+        android:text="Avaiable:"
+        android:layout_marginTop="20dp"
         android:layout_below="@id/lblDate"
         android:padding="10dp"/>
 
@@ -103,11 +120,13 @@
         android:fontFamily="@font/proxima_nova_thin"
         android:textSize="12sp"
         android:textColor="@color/txtColor"
-        android:background="@color/backgroundColorList"
+        android:background="@drawable/custom_list_item"
         android:id="@+id/lblAvaiable"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Nomesadfsdfs"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
         android:padding="10dp"
         android:layout_below="@+id/txtAvaiable"/>
 
@@ -121,7 +140,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Discotecar"
-        android:padding="10dp"
-        android:layout_below="@id/lblAvaiable"/>
+        android:layout_alignParentBottom="true"
+        android:padding="10dp"/>
 
 </RelativeLayout>

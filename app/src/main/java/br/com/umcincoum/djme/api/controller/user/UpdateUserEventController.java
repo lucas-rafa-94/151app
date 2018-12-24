@@ -8,12 +8,13 @@ import br.com.umcincoum.djme.api.model.EventModel;
 import br.com.umcincoum.djme.api.model.UserModel;
 import br.com.umcincoum.djme.api.service.UserService;
 import br.com.umcincoum.djme.ui.event.ConfirmEventActivity;
+import br.com.umcincoum.djme.ui.event.EventDetailsActivity;
 
 public class UpdateUserEventController extends AsyncTask<UserModel,Void,Void> {
-    private ConfirmEventActivity confirmEventActivity;
+    private EventDetailsActivity confirmEventActivity;
 
-    public UpdateUserEventController(ConfirmEventActivity confirmEventActivity) {
-        this.confirmEventActivity = confirmEventActivity;
+    public UpdateUserEventController(EventDetailsActivity confirmEvent) {
+        this.confirmEventActivity = confirmEvent;
     }
 
     @Override
@@ -29,9 +30,15 @@ public class UpdateUserEventController extends AsyncTask<UserModel,Void,Void> {
     protected void onPostExecute(Void aVoid) {
         super.onPostExecute(aVoid);
         Gson gson = new Gson();
+
         this.confirmEventActivity.sp = this.confirmEventActivity.getSharedPreferences("appSp", 0);
         this.confirmEventActivity.editor = this.confirmEventActivity.sp.edit();
         this.confirmEventActivity.editor.putString("event", gson.toJson(this.confirmEventActivity.event));
         this.confirmEventActivity.editor.commit();
+
+        //this.confirmEventActivity.sp = this.confirmEventActivity.getSharedPreferences("appSp", 0);
+        //this.confirmEventActivity.editor = this.confirmEventActivity.sp.edit();
+        //this.confirmEventActivity.editor.putString("event", gson.toJson(this.confirmEventActivity.event));
+        //this.confirmEventActivity.editor.commit();
     }
 }
